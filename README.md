@@ -20,6 +20,8 @@ var mh = new MustHave();
 mh.hasAll(process.env, 'IMPORTANT_VAR_1', 'IMPORTANT_VAR_2'); // returns boolean
 ```
 
+If the `hasAll` method fails, the missing attributes are available in `mh.missing` (returned as an array of strings).
+
 ### Use: HasAny
 
 If you need to make sure an object has _at least_ one attribute of a specific name, use the `hasAny()` method.
