@@ -2,4 +2,5 @@
 _*
 !.npmignore
 !.gitignore
+!.travis.yml
 node_modules

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/coreybutler/musthave.svg)](https://travis-ci.org/coreybutler/musthave)
+
 # musthave
 
 This module provides a simple and standard way of checking for object attributes.
