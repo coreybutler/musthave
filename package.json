@@ -1,0 +1,33 @@
+{
+  "name": "musthave",
+  "version": "1.0.0",
+  "description": "A minimal utility module to throw errors when an object does not contain \"must have\" keys.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/coreybutler/musthave.git"
+  },
+  "keywords": [
+    "must",
+    "have",
+    "object",
+    "require",
+    "key",
+    "value"
+  ],
+  "author": "Corey Butler <corey@coreybutler.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coreybutler/musthave/issues"
+  },
+  "homepage": "https://github.com/coreybutler/musthave",
+  "dependencies": {
+    "chalk": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
+}
