@@ -3,18 +3,26 @@ var chalk = require('chalk');
 var obj = function (cfg) {
 
   cfg = cfg || {
-    throwOnError: true
+    throwOnError: true,
+    suppressWarnings: false
   };
 
-  var log = cfg.throwOnError ? console.error : console.log;
+  var log = cfg.throwOnError ? console.warn : console.log;
 
   Object.defineProperties(this, {
 
     throwOnError: {
       enumerable: false,
-      writable: true,
+      writable: false,
       configurable: false,
       value: cfg.hasOwnProperty('throwOnError') ? cfg.throwOnError : true
+    },
+
+    suppressWarnings: {
+      enumerable: false,
+      writable: false,
+      configurable: false,
+      value: cfg.hasOwnProperty('suppressWarnings') ? cfg.suppressWarnings : false
     },
 
     args: {
@@ -58,10 +66,15 @@ var obj = function (cfg) {
           return o.indexOf(el) < 0;
         });
 
-        var ok = this.missing.length === 0;
-        !ok && this.throwOnError && (log(chalk.red.bold('Missing '+this.missingList)));
+        if (this.missing.length > 0){
+          !this.suppressWarnings && (log(chalk.red.bold('Missing '+this.missingList)));
+          if (this.throwOnError){
+            throw new Error('Missing '+this.missingList);
+          }
+          return false;
+        }
 
-        return ok;
+        return true;
       }
     },
 

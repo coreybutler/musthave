@@ -13,7 +13,8 @@ suite('MustHave Methods',function(){
       b: 2
     };
     mh = new MustHave({
-      throwOnError: false
+      throwOnError: false,
+      suppressWarnings: true
     });
   });
 

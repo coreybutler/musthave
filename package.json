@@ -4,7 +4,7 @@
   "description": "A minimal utility module to throw errors when an object does not contain \"must have\" keys.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha --ui tdd test"
   },
   "repository": {
     "type": "git",
