@@ -1,6 +1,6 @@
 {
   "name": "musthave",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal utility module to throw errors when an object does not contain \"must have\" keys.",
   "main": "index.js",
   "scripts": {
