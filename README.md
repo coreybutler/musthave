@@ -46,7 +46,7 @@ var mh = new MustHave();
 mh.hasExactly(process.env, 'IMPORTANT_VAR_1', 'IMPORTANT_VAR_2'); // returns boolean
 ```
 
-The code above will **not** throw and error _only if `process.env` has_ `IMPORTANT_VAR_1` _and_ `IMPORTANT_VAR_2`. If `process.env` has both of these _and_ another attribute like `NODE_ENV`, this method will throw an error because the object is not exactly as defined. You probably don't want to use this on `process.env` because it can change from system to system, but it can be useful on other kinds of objects like data models.
+The code above will **not** throw an error _only if `process.env` has_ `IMPORTANT_VAR_1` _and_ `IMPORTANT_VAR_2`. If `process.env` has both of these _and_ another attribute like `NODE_ENV`, this method will throw an error because the object is not exactly as defined. You probably don't want to use this on `process.env` because it can change from system to system, but it can be useful on other kinds of objects like data models.
 
 ### Handling Errors & Suppressing Warnings
 
