@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/coreybutler/musthave.svg)](https://travis-ci.org/coreybutler/musthave) [![Greenkeeper badge](https://badges.greenkeeper.io/coreybutler/musthave.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/coreybutler/musthave.svg)](https://travis-ci.org/coreybutler/musthave)
 
 # musthave
 
